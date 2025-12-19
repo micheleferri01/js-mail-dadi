@@ -19,7 +19,7 @@ let endGame = false;
 while (endGame === false){
 
     // Chiedo all'utente di inserire un numero o terminare il gioco
-    let userInput = prompt("Inserire un numero tra 1 e 6 oppure Scrivere STOP per terminare il gioco");
+    let userInput = prompt(`Inserire un numero tra ${min} e ${max} oppure Scrivere STOP per terminare il gioco`);
 
     // Variabile per convertire l'input dell'utente in un numero
     let userNum = parseInt(userInput);
@@ -29,8 +29,11 @@ while (endGame === false){
         alert ('Gioco terminato');
         endGame = true;
     }
-    else {
-
+    else if (userNum < min || userNum > max){
+        console.log('Imserire un numero tra 1 e 6');
+        alert(`inserire un numero tra ${min} e ${max}`);
+    }
+    else{    
         // Genero numero randomico per il computer
         const pcNum = Math.floor(Math.random() * max + 1);
         console.log('user number:', userNum);
