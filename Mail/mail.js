@@ -16,7 +16,7 @@
 const mails = ['invitato1@mail.it', 'invitato2@mail.it', 'invitato3@mail.it', 'invitato4@mail.it', 'invitato5@mail.it', 'invitato6@mail.it', 'invitato7@mail.it', 'invitato8@mail.it', 'invitato9@mail.it', 'invitato10@mail.it'];
 
 // chiedo all'utente la sua mail
-const userMail = prompt("Inserire email","invitato@mail.it");
+const userMail = prompt("Inserire email","invitato5@mail.it");
 
 // Dichiaro variabile per salvare se l'utente è invitato
 let isUserInvited = false;
@@ -34,6 +34,12 @@ for (let i = 0; i < mails.length; i++){
 
 // ## Output
 // SE (la mail dell'utente è nella lista)
-// scrivo che l'utente è invitato alla festa
+if (isUserInvited === true){
+    // scrivo che l'utente è invitato alla festa
+    alert("Sei invitato alla festa");
+}
 // ALTRIMENTI
-// scrivo che l'utente non è invitato alla festa
+else{
+    // scrivo che l'utente non è invitato alla festa
+    alert ("Non sei invitato alla festa");
+}
