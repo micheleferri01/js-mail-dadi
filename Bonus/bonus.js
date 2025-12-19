@@ -1,10 +1,18 @@
 // # Gioco dei dadi Bonus
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+// Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+// ## Modifiche da apportare
+// Far inserire il numero all'utente al posto di generarlo random anche per lui.,
+// Far durare il gioco finchè l'utente non scrive "STOP" al posto di un numero.
 
 // ## Raccolta dati
 // Dichiaro il numero massimo
 const max = 6;
 // Dichiaro il numero minimo
 const min = 1;
+// Dichiaro una variabile per quando interrompere il gioco
+let endGame = false;
 
 // ## Elaborazione
 // Genero numero randomico per l'utente
