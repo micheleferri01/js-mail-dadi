@@ -18,8 +18,12 @@ let endGame = false;
 // imposto la condizione di avvio del ciclo
 while (endgame === false){
 
-    // Genero numero randomico per l'utente
-    const userNum = Math.floor(Math.random() * max + 1);
+    // Chiedo all'utente di inserire un numero o terminare il gioco
+    let userInput = prompt("Inserire un numero tra 1 e 6 oppure Scrivere STOP per terminare il gioco");
+
+    // Variabile per convertire l'input dell'utente in un numero
+    let userNum = parseInt(userInput);
+
     // Genero numero randomico per il computer
     const pcNum = Math.floor(Math.random() * max + 1);
     console.log('user number:', userNum);
