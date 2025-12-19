@@ -16,7 +16,7 @@ let endGame = false;
 
 // ## Elaborazione
 // imposto la condizione di avvio del ciclo
-while (endgame === false){
+while (endGame === false){
 
     // Chiedo all'utente di inserire un numero o terminare il gioco
     let userInput = prompt("Inserire un numero tra 1 e 6 oppure Scrivere STOP per terminare il gioco");
@@ -24,24 +24,32 @@ while (endgame === false){
     // Variabile per convertire l'input dell'utente in un numero
     let userNum = parseInt(userInput);
 
-    // Genero numero randomico per il computer
-    const pcNum = Math.floor(Math.random() * max + 1);
-    console.log('user number:', userNum);
-    console.log('computer number:', pcNum);
-    
-    // Controllo chi ha il punteggio più alto
-    const userWon = userNum > pcNum;
-    // console.log(userWon);
-    
-    // ## Output
-    // SE (numero utente > numero computer)
-    if (userWon === true) {
-        // Ha vinto l'utente
-        console.log('Winner:', 'User');
+    if (userInput.toUpperCase() === false || isNaN(userNum)){
+        console.log("Gioco terminato");
+        alert ('Gioco terminato');
+        endGame = true;
     }
-    // ALTRIMENTI
     else {
-        // Ha vinto il computer
-        console.log('Winner:', 'Computer');
+
+        // Genero numero randomico per il computer
+        const pcNum = Math.floor(Math.random() * max + 1);
+        console.log('user number:', userNum);
+        console.log('computer number:', pcNum);
+        
+        // Controllo chi ha il punteggio più alto
+        const userWon = userNum > pcNum;
+        // console.log(userWon);
+        
+        // ## Output
+        // SE (numero utente > numero computer)
+        if (userWon === true) {
+            // Ha vinto l'utente
+            console.log('Winner:', 'User');
+        }
+        // ALTRIMENTI
+        else {
+            // Ha vinto il computer
+            console.log('Winner:', 'Computer');
+        }
     }
 }
