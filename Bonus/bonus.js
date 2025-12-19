@@ -1,0 +1,31 @@
+// # Gioco dei dadi Bonus
+
+// ## Raccolta dati
+// Dichiaro il numero massimo
+const max = 6;
+// Dichiaro il numero minimo
+const min = 1;
+
+// ## Elaborazione
+// Genero numero randomico per l'utente
+const userNum = Math.floor(Math.random() * max + 1);
+// Genero numero randomico per il computer
+const pcNum = Math.floor(Math.random() * max + 1);
+console.log('user number:', userNum);
+console.log('computer number:', pcNum);
+
+// Controllo chi ha il punteggio più alto
+const userWon = userNum > pcNum;
+// console.log(userWon);
+
+// ## Output
+// SE (numero utente > numero computer)
+if (userWon === true) {
+    // Ha vinto l'utente
+    console.log('Winner:', 'User');
+}
+// ALTRIMENTI
+else {
+    // Ha vinto il computer
+    console.log('Winner:', 'Computer');
+}
