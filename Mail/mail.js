@@ -23,6 +23,9 @@ let isUserInvited = false;
 
 // ## Elaborazione
 // Scorro la lista delle mail
+for (let i = 0; i < mails.length; i++){
+    const currentMail = mails[i];
+}
 // controllo che la mail dell'utente sia nella lista
 
 // ## Output
