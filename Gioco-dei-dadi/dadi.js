@@ -13,9 +13,13 @@ const min = 1;
 
 // ## Elaborazione
 // Genero numero randomico per l'utente
+const userNum = Math.floor(Math.random() * max + 1);
 // Genero numero randomico per il computer
-// Controllo chi ha il punteggio più alto
+const pcNum = Math.floor(Math.random() * max + 1);
+console.log('user number:', userNum);
+console.log('computer number:', pcNum);
 
+// Controllo chi ha il punteggio più alto
 // ## Output
 // SE (numero utente > numero computer)
 // Ha vinto l'utente
