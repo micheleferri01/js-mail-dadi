@@ -13,7 +13,13 @@
 
 // # Raccolta dati
 // Dichiaro un array con tutte le mail di chi può accedere alla festa
+const mails = ['invitato1@mail.it', 'invitato2@mail.it', 'invitato3@mail.it', 'invitato4@mail.it', 'invitato5@mail.it', 'invitato6@mail.it', 'invitato7@mail.it', 'invitato8@mail.it', 'invitato9@mail.it', 'invitato10@mail.it'];
+
 // chiedo all'utente la sua mail
+const userMail = prompt("Inserire email","invitato@mail.it");
+
+// Dichiaro variabile per salvare se l'utente è invitato
+let isUserInvited = false;
 
 // ## Elaborazione
 // Scorro la lista delle mail
