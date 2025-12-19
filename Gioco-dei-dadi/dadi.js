@@ -25,6 +25,12 @@ const userWon = userNum > pcNum;
 
 // ## Output
 // SE (numero utente > numero computer)
-// Ha vinto l'utente
+if (userWon === true){
+    // Ha vinto l'utente
+    console.log('Winner:','User');
+}
 // ALTRIMENTI
-// Ha vinto il computer
+else{
+    // Ha vinto il computer
+    console.log('Winner:', 'Computer');
+}
