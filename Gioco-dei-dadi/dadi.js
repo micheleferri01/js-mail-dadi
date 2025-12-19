@@ -7,7 +7,9 @@
 
 // ## Raccolta dati
 // Dichiaro il numero massimo
+const max = 6;
 // Dichiaro il numero minimo
+const min = 1;
 
 // ## Elaborazione
 // Genero numero randomico per l'utente
