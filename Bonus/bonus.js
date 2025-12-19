@@ -23,12 +23,14 @@ while (endGame === false){
 
     // Variabile per convertire l'input dell'utente in un numero
     let userNum = parseInt(userInput);
-
+    
+    // Controllo che l'utente non voglia interrompere il gioco
     if (userInput.toUpperCase() === false || isNaN(userNum)){
         console.log("Gioco terminato");
         alert ('Gioco terminato');
         endGame = true;
     }
+    // Controllo che l'utente abbia inserito un valore numerico che sia nel range permesso
     else if (userNum < min || userNum > max){
         console.log('Imserire un numero tra 1 e 6');
         alert(`inserire un numero tra ${min} e ${max}`);
@@ -44,15 +46,23 @@ while (endGame === false){
         // console.log(userWon);
         
         // ## Output
-        // SE (numero utente > numero computer)
-        if (userWon === true) {
+        // SE (numero utente === numero computer)
+        if (userNum === pcNum){
+            // è pareggio
+            console.log('Pareggio');
+            alert(`Risultato\nNumero utente: ${userNum}\nNumero computer: ${pcNum}\nPareggio`);
+        }
+        // ALTRIMENTI SE (numero utente > numero computer)
+        else if (userWon === true) {
             // Ha vinto l'utente
             console.log('Winner:', 'User');
+            alert(`Risultato\nNumero utente: ${userNum}\nNumero computer: ${pcNum}\nHa vinto l'utente`);
         }
         // ALTRIMENTI
         else {
             // Ha vinto il computer
             console.log('Winner:', 'Computer');
+            alert(`Risultato\nNumero utente: ${userNum}\nNumero computer: ${pcNum}\nHa vinto il computer`);
         }
     }
 }
