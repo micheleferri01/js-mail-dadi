@@ -20,6 +20,9 @@ console.log('user number:', userNum);
 console.log('computer number:', pcNum);
 
 // Controllo chi ha il punteggio più alto
+const userWon = userNum > pcNum;
+// console.log(userWon);
+
 // ## Output
 // SE (numero utente > numero computer)
 // Ha vinto l'utente
